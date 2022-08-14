@@ -24,7 +24,13 @@ class CartService {
     }
 
     remove(productId) {
-        delete this.cart[productId]
+        const amount = this.cart[productId].amount
+        if (amount === 1 ) {
+            delete this.cart[productId]
+        } else {
+            this.cart[productId].amount--
+        }
+
     }
 
 

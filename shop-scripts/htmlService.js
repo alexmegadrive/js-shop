@@ -1,9 +1,16 @@
+function cutString(string = '', maxLength = 30) {
+    if (string.length > 30) {
+        return string.substring(0,maxLength) + '...'
+    }
+    return string
+}
+
 class HTMLService {
     paintProduct(product) {
         return `
         <li data-id="${product.id}">
             <img src="${product.image}" title="${product.title}" />
-            <small>${product.title}</small>
+            <small>${cutString(product.title, 30)}</small>
             <small><strong>${product.price}</strong></small>
         </li>`
     }
@@ -23,8 +30,8 @@ class HTMLService {
     }
 
 
-    paintCart( { items, totalPrice} ) {
-        if (!items || items.length === 0  ) {
+    paintCart( { items , totalPrice} ) {
+        if ( items.length === 0  ) {
             return `<p>Корзина пуста</p>`
         }
         return  `
