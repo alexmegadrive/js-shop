@@ -1,9 +1,8 @@
-### Базовый функционал для интернет-магазина
+### Basic functionality for an online store
 
-- Рендер товаров из API fakestoreapi.com
-- Функция фильтрации товаров по значению инпута
-- Функция корзины с добавлением/удалением товаров и подсчетом стоимости корзины
-- Для удобства все функции разбиты по классам (класс для корзины, класс для продуктов, класс для отрисовки HTML)
+- Rendering of products from the API  fakestoreapi.com
+- Product filtering function by input value
+- Cart function with adding/removing items and calculating the cost of the basket
+- Separated business logic layer from rendering layer with classes
 
-
-Открыть в браузере - https://alexmegadrive.github.io/js-shop/
+Open in browser - https://alexmegadrive.github.io/js-shop/
